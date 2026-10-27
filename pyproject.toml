@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hawkchord6-quantdiff"
+version = "0.1.0"
+description = "计算多个分位数上的分数差，定位是整体平移还是尾部恶化"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "hawkchord6" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://hawkchord6.github.io"
+Repository = "https://github.com/hawkchord6/quantdiff"
+Issues = "https://github.com/hawkchord6/quantdiff/issues"
+
+[project.scripts]
+quantdiff = "quantdiff:main"
+
+[tool.setuptools]
+py-modules = ["quantdiff"]
